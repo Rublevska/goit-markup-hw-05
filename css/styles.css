@@ -619,13 +619,26 @@ body {
 }
 
 .modal-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
   margin-left: auto;
   background-color: #e7e9fc;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+
+  transition: background-color var(--anim-speed), color var(--anim-speed);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--accent-bg-color);
+  color: var(--light-btn-txt);
 }
 
 .modal-icon {
+  fill: currentColor;
 }
