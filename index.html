@@ -30,25 +30,25 @@
           >
           <ul class="list header-list">
             <li>
-              <a href="./index.html" class="link header-link">Studio</a>
+              <a href="./index.html" class="current header-link link">Studio</a>
             </li>
             <li>
-              <a href="./portfolio.html" class="link header-link">Portfolio</a>
+              <a href="./portfolio.html" class="header-link link">Portfolio</a>
             </li>
             <li>
-              <a href="" class="link header-link">Contacts</a>
+              <a href="" class="header-link link">Contacts</a>
             </li>
           </ul>
         </nav>
         <address class="address">
-          <ul class="list header-list">
+          <ul class="header-list list">
             <li>
-              <a href="mailto:info@devstudio.com" class="link address-link"
+              <a href="mailto:info@devstudio.com" class="address-link link"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a href="tel:+110001111111" class="link address-link"
+              <a href="tel:+110001111111" class="address-link link"
                 >+11 (000) 111-11-11</a
               >
             </li>
@@ -61,13 +61,15 @@
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="btn hero-btn">Order Service</button>
+          <button class="hero-btn btn" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- Features section -->
       <section class="section">
         <div class="container">
-          <h2 hidden class="section-title">Features</h2>
+          <h2 class="visually-hidden">Features</h2>
           <ul class="list card-set">
             <li class="card-set-item">
               <div class="feature-icon">
@@ -581,5 +583,17 @@
         </div>
       </div>
     </footer>
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icon.svg#close-modal"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
