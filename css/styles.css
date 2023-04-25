@@ -185,6 +185,10 @@ body {
   border-radius: 2px;
 }
 
+.current {
+  color: var(--accent-bg-color);
+}
+
 .current.header-link::after {
   background-color: var(--accent-bg-color);
 }
@@ -296,7 +300,6 @@ body {
   align-items: center;
   width: 264px;
   height: 112px;
-  padding: 24px 100px;
   margin-bottom: 8px;
   background: #f4f4fd;
   border-radius: 4px;
@@ -518,6 +521,7 @@ body {
 
 .portfolio-link {
   display: block;
+  transition: box-shadow var(--anim-speed);
 }
 
 .portfolio-link:hover,
@@ -544,14 +548,13 @@ body {
 
   background-color: var(--social-btn-color);
 
-  transition: transform var(--anim-speed), opacity var(--anim-speed);
+  transition: transform var(--anim-speed);
 }
 
 .portfolio-link:hover .overlay,
 .portfolio-link:focus .overlay,
 .portfolio-item:hover .overlay {
   transform: translateY(0);
-  opacity: 0.8;
 }
 
 .overlay-label {
@@ -599,23 +602,22 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
 
   width: 408px;
   min-height: 584px;
   padding: 24px;
 
+  color: var(--title-txt);
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform var(--anim-speed) 250ms, opacity var(--anim-speed) 250ms;
+  transition: transform var(--anim-speed) 250ms;
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
 }
 
 .modal-btn {
